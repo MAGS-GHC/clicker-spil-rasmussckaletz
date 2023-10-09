@@ -1,6 +1,6 @@
 let cookies = 0;
 
-let multiplierCookies = {
+const multiplierCookies = {
     level1: 1,
     level2: 2,
     level3: 4,
@@ -13,7 +13,7 @@ let multiplierCookies = {
     level10: 512,
 }
 
-let multiplierCookiePrice = {
+const multiplierCookiePrice = {
     level2Price: 10,
     level3Price: 100,
     level4Price: 1000,
@@ -37,19 +37,30 @@ function ClickOnCookie() {
     UpdateCookieCounter();
 }
 
-function DoubleCookies() {
-    if (cookieMultiplier === multiplierCookies.level1) {
-        if (cookies >= multiplierCookiePrice.level2Price) {
-            cookies -= multiplierCookiePrice.level2Price;
-            document.getElementById("cookieknap").innerHTML = `4 x Cookies`;
-            cookieMultiplier = multiplierCookies.level2;
+function MultiplierCookieFunc() {
+    const multiplierLevels = [
+        { level: multiplierCookies.level1, price: multiplierCookiePrice.level2Price, nextLevel: multiplierCookies.level2, nextButtonText: "4 x Cookies" },
+        { level: multiplierCookies.level2, price: multiplierCookiePrice.level3Price, nextLevel: multiplierCookies.level3, nextButtonText: "8 x Cookies" },
+        { level: multiplierCookies.level3, price: multiplierCookiePrice.level4Price, nextLevel: multiplierCookies.level4, nextButtonText: "16 x Cookies" },
+        { level: multiplierCookies.level4, price: multiplierCookiePrice.level5Price, nextLevel: multiplierCookies.level5, nextButtonText: "32 x Cookies" },
+        { level: multiplierCookies.level5, price: multiplierCookiePrice.level6Price, nextLevel: multiplierCookies.level6, nextButtonText: "64 x Cookies" },
+        { level: multiplierCookies.level6, price: multiplierCookiePrice.level7Price, nextLevel: multiplierCookies.level7, nextButtonText: "128 x Cookies" },
+        { level: multiplierCookies.level7, price: multiplierCookiePrice.level8Price, nextLevel: multiplierCookies.level8, nextButtonText: "256 x Cookies" },
+        { level: multiplierCookies.level8, price: multiplierCookiePrice.level9Price, nextLevel: multiplierCookies.level9, nextButtonText: "512 x Cookies" },
+        { level: multiplierCookies.level9, price: multiplierCookiePrice.level10Price, nextLevel: multiplierCookies.level10, nextButtonText: "Maxed" }
+    ];
+
+    for (let index in multiplierLevels) {
+        const level = multiplierLevels[index];
+        if (cookieMultiplier === level.level) {
+            if (cookies >= level.price) {
+                cookies -= level.price;
+                document.getElementById("cookieknap").innerHTML = level.nextButtonText;
+                cookieMultiplier = level.nextLevel;
+            }
+            break;
         }
-    } else if (cookieMultiplier === multiplierCookies.level2) {
-        if (cookies >= multiplierCookiePrice.level3Price) {
-            cookies -= multiplierCookiePrice.level3Price;
-            document.getElementById("cookieknap").innerHTML = `8 x Cookies`;
-            cookieMultiplier = multiplierCookies.level3;
-        }
+        continue;
     }
     UpdateCookieCounter();
 }
