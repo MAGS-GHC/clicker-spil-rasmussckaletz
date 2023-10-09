@@ -33,19 +33,7 @@ function UpdateCookieCounter() {
 }
 
 function ClickOnCookie() {
-
     cookies += cookieMultiplier;
-/*
-    if (doubleCookieBought === true) {
-        cookies += 2
-    } else {
-        cookies++;
-    }
-*/
-    if (cookies >= 100) {
-        doubleCookieBought = false;
-    }
-
     UpdateCookieCounter();
 }
 
@@ -63,16 +51,5 @@ function DoubleCookies() {
             cookieMultiplier = multiplierCookies.level3;
         }
     }
-
     UpdateCookieCounter();
-/*
-    if (doubleCookieBought === false) {
-        if (cookies >= 10) {
-            cookies -= 10;
-            document.getElementById("cookieknap").innerHTML = `4 x Cookies`;
-            doubleCookieBought = true;
-            UpdateCookieCounter();
-        }
-    }
-*/
 }
