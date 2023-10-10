@@ -140,25 +140,19 @@ function AutoclickerStore() {
         { level: autoclickerLevel.level9, price: autoclickerPrice.level10Price, time: autoclickerTime.level10Time, nextLevel: autoclickerLevel.level10, nextButtonText: "Maxed" },
     ];
 
-    let buttonLabel = document.getElementById("autoclicker").innerHTML;
-    console.log(buttonLabel);
-
     for (let index in autoclickerLevels) {
         console.log(1);
         const level = autoclickerLevels[index];
-        if (buttonLabel != "1 x Hastighed") {
-            if (buttonLabel === level.nextButtonText) {
-                console.log(2);
-                if (cookies >= level.price) {
-                    console.log(3);
-                    cookies -= level.price;
-                    document.getElementById("autoclicker").innerHTML = level.nextButtonText;
-                    clickPerSecond = level.nextLevel;
-                    console.log(level.level);
-                    console.log(level.time);
-                    AutoclickOnCookie(level.time);
-                }
-                break;
+        if (clickPerSecond === level.level) {
+            console.log(2);
+            if (cookies >= level.price) {
+                console.log(3);
+                cookies -= level.price;
+                document.getElementById("autoclicker").innerHTML = level.nextButtonText;
+                clickPerSecond = level.nextLevel;
+                console.log(level.level);
+                console.log(level.time);
+                AutoclickOnCookie(level.time);
             }
             break;
         }
