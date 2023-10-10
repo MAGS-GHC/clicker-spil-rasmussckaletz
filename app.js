@@ -146,7 +146,8 @@ function AutoclickerStore() {
                 console.log(3);
                 cookies -= level.price;
                 document.getElementById("autoclicker").innerHTML = level.nextButtonText;
-                clickPerSecond = level.level;
+                clickPerSecond = level.nextLevel;
+                console.log(level.level);
                 console.log(level.time);
                 AutoclickOnCookie(level.time);
             }
