@@ -1,5 +1,6 @@
 let cookies = 0;
 
+
 const multiplierCookies = {
     level1: 1,
     level2: 2,
@@ -25,18 +26,20 @@ const multiplierCookiePrice = {
     level10Price: 100000000,
 }
 
+let cookieMultiplier = multiplierCookies.level1;
+
 const autoclickerLevel = {
     level0: 0,
-    level1: 1,
-    level2: 2,
-    level3: 3,
-    level4: 4,
-    level5: 5,
-    level6: 6,
-    level7: 7,
-    level8: 8,
-    level9: 9,
-    level10: 10,
+    level1: cookieMultiplier,
+    level2: cookieMultiplier,
+    level3: cookieMultiplier,
+    level4: cookieMultiplier,
+    level5: cookieMultiplier,
+    level6: cookieMultiplier,
+    level7: cookieMultiplier,
+    level8: cookieMultiplier,
+    level9: cookieMultiplier,
+    level10: cookieMultiplier,
 }
 
 const autoclickerTime = {
@@ -67,7 +70,7 @@ const autoclickerPrice = {
 
 
 
-let cookieMultiplier = multiplierCookies.level1;
+
 let clickPerSecond = autoclickerLevel.level0;
 let autoclickInterval;
 
@@ -137,19 +140,25 @@ function AutoclickerStore() {
         { level: autoclickerLevel.level9, price: autoclickerPrice.level10Price, time: autoclickerTime.level10Time, nextLevel: autoclickerLevel.level10, nextButtonText: "Maxed" },
     ];
 
+    let buttonLabel = document.getElementById("autoclicker").innerHTML;
+    console.log(buttonLabel);
+
     for (let index in autoclickerLevels) {
         console.log(1);
         const level = autoclickerLevels[index];
-        if (clickPerSecond === level.level) {
-            console.log(2);
-            if (cookies >= level.price) {
-                console.log(3);
-                cookies -= level.price;
-                document.getElementById("autoclicker").innerHTML = level.nextButtonText;
-                clickPerSecond = level.nextLevel;
-                console.log(level.level);
-                console.log(level.time);
-                AutoclickOnCookie(level.time);
+        if (buttonLabel != "1 x Hastighed") {
+            if (buttonLabel === level.nextButtonText) {
+                console.log(2);
+                if (cookies >= level.price) {
+                    console.log(3);
+                    cookies -= level.price;
+                    document.getElementById("autoclicker").innerHTML = level.nextButtonText;
+                    clickPerSecond = level.nextLevel;
+                    console.log(level.level);
+                    console.log(level.time);
+                    AutoclickOnCookie(level.time);
+                }
+                break;
             }
             break;
         }
