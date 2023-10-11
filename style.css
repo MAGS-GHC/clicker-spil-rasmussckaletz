@@ -60,6 +60,14 @@ body {
     transition: 0.2s;
 }
 
+#cookieknap:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+    background-color: rgb(90, 68, 45);
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.2s;
+}
+
 #cookiesInTotal {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -96,5 +104,13 @@ body {
 #autoclicker:hover {
     background-color: rgb(95, 57, 14);
     transform: translate(-50%, -50%) scale(1.1);
+    transition: 0.2s;
+}
+
+#autoclicker:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+    background-color: rgb(90, 68, 45);
+    transform: translate(-50%, -50%) scale(1);
     transition: 0.2s;
 }
