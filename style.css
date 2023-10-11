@@ -24,15 +24,19 @@ body {
     left: 50%;
     transition: 0.2s;
     cursor: pointer;
+    filter: drop-shadow(0 0 10px black);
+    animation: rotates 25s linear infinite;
+    transform-origin: center;
+    transform-box: both;
 }
 
-#cookieclickerknap:hover {
-    transform: translate(-50%, -50%) scale(1.15);
-    transition: 0.2s;
-}
-
-#cookieclickerknap:active {
-    transform: translate(-50%, -50%) scale(1.05);
+@keyframes rotates {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 #cookieknap {
