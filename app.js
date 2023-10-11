@@ -81,8 +81,6 @@ let cookieMultiplier = multiplierCookies.level1;
 let autoclickInterval;
 let labelOnAutoclickButton =  "1 x Hastighed";
 
-
-
 function UpdateCookieCounter() {
     let cookieKnapHTML = document.getElementById("cookieknap");
     let autoclickerKnapHTML = document.getElementById("autoclicker");
@@ -97,7 +95,7 @@ function UpdateCookieCounter() {
             cookieKnapHTML.disabled = false;
         }
     }
-    
+
     for (let index in autoclickerLevels) {
         const level = autoclickerLevels[index];
         if (labelOnAutoclickButton === level.buttonLabel && cookies >= level.price) {

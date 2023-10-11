@@ -39,8 +39,8 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: absolute;
-    top: 50%;
-    left: 80%;
+    top: 45%;
+    left: 75%;
     background-color: rgb(122, 76, 22);
     color: ghostwhite;
     border: 2px solid rgb(95, 57, 14);
@@ -86,8 +86,8 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: absolute;
-    top: 65%;
-    left: 80%;
+    top: 55%;
+    left: 75%;
     background-color: rgb(122, 76, 22);
     color: ghostwhite;
     border: 2px solid rgb(95, 57, 14);
