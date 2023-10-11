@@ -167,3 +167,5 @@ function AutoclickerStore() {
         continue;
     }
 }
+
+setInterval(UpdateCookieCounter, 100) // Opdaterer siden kort efter den bliver loadet, så knapper bliver låst fra start, siden man ingen cookies vil have
