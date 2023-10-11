@@ -5,7 +5,7 @@ body {
     height: 100%;
 }
 
-#cookies {
+#cookies, #cookiesInTotal {
     padding-top: 8%;
     color: ghostwhite;
     font-weight: bold;
@@ -55,6 +55,45 @@ body {
 }
 
 #cookieknap:hover {
+    background-color: rgb(95, 57, 14);
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: 0.2s;
+}
+
+#cookiesInTotal {
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    padding-top: 8%;
+    color: ghostwhite;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 0px 6px black;
+}
+
+#autoclicker {
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 65%;
+    left: 80%;
+    background-color: rgb(122, 76, 22);
+    color: ghostwhite;
+    border: 2px solid rgb(95, 57, 14);
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 10%;
+    height: 5%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#autoclicker:hover {
     background-color: rgb(95, 57, 14);
     transform: translate(-50%, -50%) scale(1.1);
     transition: 0.2s;

@@ -1,4 +1,5 @@
 let cookies = 0;
+let cookiesInTotal = 0;
 
 const multiplierCookies = {
     level1: 1,
@@ -57,11 +58,13 @@ let labelOnAutoclickButton =  "1 x Hastighed";
 
 function UpdateCookieCounter() {
     document.getElementById("cookies").innerHTML = `${cookies} cookies`;
+    document.getElementById("cookiesInTotal").innerHTML = `${cookiesInTotal} cookies in total`;
     document.title = `${cookies} cookies - Clicker Spil`;
 }
 
 function ClickOnCookie() {
     cookies += cookieMultiplier;
+    cookiesInTotal += cookieMultiplier;
     UpdateCookieCounter();
 }
 
