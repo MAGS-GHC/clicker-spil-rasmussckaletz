@@ -1,4 +1,5 @@
 body {
+    user-select: none;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -25,18 +26,15 @@ body {
     transition: 0.2s;
     cursor: pointer;
     filter: drop-shadow(0 0 10px black);
-    animation: rotates 25s linear infinite;
-    transform-origin: center;
-    transform-box: both;
 }
 
-@keyframes rotates {
-    from {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-      transform: translate(-50%, -50%) rotate(360deg);
-    }
+#cookieclickerknap:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+    transition: 0.2s;
+}
+
+#cookieclickerknap:active {
+    transform: translate(-50%, -50%) scale(1.05);
 }
 
 #cookieknap {
@@ -117,4 +115,52 @@ body {
     background-color: rgb(90, 68, 45);
     transform: translate(-50%, -50%) scale(1);
     transition: 0.2s;
+}
+
+#shine {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 6.7%; 
+    height: 13.5%; 
+    background-image: url('/Billeder/shine.png'); 
+    animation: rotates 25s linear infinite;
+    transform-origin: center;
+    transform-box: both;
+    overflow: visible;
+    border: none;
+    opacity: 25%;
+}
+
+#shine2 {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 6.7%; 
+    height: 13.5%; 
+    background-image: url('/Billeder/shine.png'); 
+    animation: rotatesCounterClockwise 25s linear infinite;
+    transform-origin: center;
+    transform-box: both;
+    overflow: visible;
+    border: none;
+    opacity: 25%;
+}
+
+@keyframes rotates {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) scale(3.5);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) scale(3.5);
+    }
+}
+
+@keyframes rotatesCounterClockwise {
+    from {
+      transform: translate(-50%, -50%) rotate(360deg) scale(3.5);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(0deg) scale(3.5);
+    }
 }
