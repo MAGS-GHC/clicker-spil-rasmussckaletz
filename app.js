@@ -144,7 +144,7 @@ function MultiplierCookieStore() {
                 document.getElementById("cookieknap").innerHTML = level.nextButtonText;
                 cookieMultiplier = level.nextLevel; // Fastsætter nyt level
                 UpdateCookieCounter(level.price); // Opdaterer counter
-                showPopup();
+                showPopup(String(cookieMultiplier));
                 //window.alert("Du opgraderede antal cookies pr. klik!"); // Giver achievement / confirmation popup ved køb
             }
             break;
@@ -160,11 +160,10 @@ function AutoclickerStore() {
         if (labelOnAutoclickButton === level.buttonLabel) {
             if (cookies >= level.price) { // Tjekker om vi har cookies nok til opgradering
                 cookies -= level.price; // Fratrækker opgraderingspris fra cookies
+                showPopup(labelOnAutoclickButton);
                 labelOnAutoclickButton = level.nextButtonLabel;
                 document.getElementById("autoclicker").innerHTML = level.nextButtonLabel;
                 AutoclickOnCookie(level.nextUprade, level.price); // Fastsætter nyt level
-                showPopup();
-                //window.alert("Du opgraderede din autoclicker!"); // Giver achievement / confirmation popup ved køb
             }
             break;
         }
