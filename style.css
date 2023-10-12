@@ -4,18 +4,18 @@ body {
     background-attachment: fixed;
     background-size: cover;
     height: 100%;
-}
-
-#cookies, #cookiesInTotal {
+  }
+  
+  #cookies, #cookiesInTotal {
     padding-top: 8%;
     color: ghostwhite;
     font-weight: bold;
     font-size: 35px;
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 0px 0px 6px black;
-}
-
-#cookieclickerknap {
+  }
+  
+  #cookieclickerknap {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: auto;
@@ -26,18 +26,18 @@ body {
     transition: 0.2s;
     cursor: pointer;
     filter: drop-shadow(0 0 10px black);
-}
-
-#cookieclickerknap:hover {
+  }
+  
+  #cookieclickerknap:hover {
     transform: translate(-50%, -50%) scale(1.15);
     transition: 0.2s;
-}
-
-#cookieclickerknap:active {
+  }
+  
+  #cookieclickerknap:active {
     transform: translate(-50%, -50%) scale(1.05);
-}
-
-#cookieknap {
+  }
+  
+  #cookieknap {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: absolute;
@@ -55,27 +55,27 @@ body {
     cursor: pointer;
     transition: 0.2s;
     filter: drop-shadow(0 0 5px rgb(44, 44, 44));
-}
-
-#cookieknap:hover {
+  }
+  
+  #cookieknap:hover {
     background-color: rgb(95, 57, 14);
     transform: translate(-50%, -50%) scale(1.1);
     transition: 0.2s;
-}
-
-#cookieknap:disabled {
+  }
+  
+  #cookieknap:disabled {
     opacity: 0.75;
     cursor: not-allowed;
     background-color: rgb(90, 68, 45);
     transform: translate(-50%, -50%) scale(1);
     transition: 0.2s;
-}
-
-#cookiesInTotal {
+  }
+  
+  #cookiesInTotal {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: absolute;
-    top: 65%;
+    top: 76%;
     left: 50%;
     padding-top: 8%;
     color: ghostwhite;
@@ -83,9 +83,23 @@ body {
     font-size: 35px;
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 0px 0px 6px black;
-}
-
-#autoclicker {
+  }
+  
+  #highscore {
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    padding-top: 8%;
+    color: ghostwhite;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 0px 6px black;
+  }
+  
+  #autoclicker {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: absolute;
@@ -103,23 +117,23 @@ body {
     cursor: pointer;
     transition: 0.2s;
     filter: drop-shadow(0 0 5px rgb(44, 44, 44));
-}
-
-#autoclicker:hover {
+  }
+  
+  #autoclicker:hover {
     background-color: rgb(95, 57, 14);
     transform: translate(-50%, -50%) scale(1.1);
     transition: 0.2s;
-}
-
-#autoclicker:disabled {
+  }
+  
+  #autoclicker:disabled {
     opacity: 0.75;
     cursor: not-allowed;
     background-color: rgb(90, 68, 45);
     transform: translate(-50%, -50%) scale(1);
     transition: 0.2s;
-}
-
-#shine {
+  }
+  
+  #shine {
     position: absolute; 
     top: 50%; 
     left: 50%; 
@@ -132,9 +146,9 @@ body {
     overflow: visible;
     border: none;
     opacity: 25%;
-}
-
-#shine2 {
+  }
+  
+  #shine2 {
     position: absolute; 
     top: 50%; 
     left: 50%; 
@@ -147,44 +161,44 @@ body {
     overflow: visible;
     border: none;
     opacity: 25%;
-}
-
-@keyframes rotates {
+  }
+  
+  @keyframes rotates {
     from {
       transform: translate(-50%, -50%) rotate(0deg) scale(3.5);
     }
     to {
       transform: translate(-50%, -50%) rotate(360deg) scale(3.5);
     }
-}
-
-@keyframes rotatesCounterClockwise {
+  }
+  
+  @keyframes rotatesCounterClockwise {
     from {
       transform: translate(-50%, -50%) rotate(360deg) scale(3.5);
     }
     to {
       transform: translate(-50%, -50%) rotate(0deg) scale(3.5);
     }
-}
-
-* {
+  }
+  
+  * {
     margin:0px;
     padding:0px;
     box-sizing:border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family:"Raleway",sans-serif;
-}
-
-.center {
+  }
+  
+  .center {
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-}
-
-.center button {
+  }
+  
+  .center button {
     padding:10px 20px;
     background:#fff;
     color:#222;
@@ -192,9 +206,9 @@ body {
     outline:none;
     border-radius:20px;
     font-size:16px;
-}
-
-.popup {
+  }
+  
+  .popup {
     position:absolute;
     top:-150%;
     left:50%;
@@ -208,24 +222,24 @@ body {
     opacity 200ms ease-in-out 0ms,
     transform 200ms ease-in-out 0ms;
     filter: drop-shadow(0 0 5px rgb(44, 44, 44));
-}
-
-.popup.active {
+  }
+  
+  .popup.active {
     top:50%;
     opacity:1;
     transform:translate(-50%,-50%) scale(1);
     transition:top 0ms ease-in-out 0ms,
     opacity 200ms ease-in-out 0ms,
     transform 200ms ease-in-out 0ms;
-}
-
-.popup .head {
+  }
+  
+  .popup .head {
     padding:30px 20px;
     background:rgb(167, 167, 167);
     text-align:center;
-}
-
-.popup .head .icon .box {
+  }
+  
+  .popup .head .icon .box {
     display:inline-block;
     width:80px;
     height:80px;
@@ -234,26 +248,26 @@ body {
     line-height:80px;
     color:rgb(167, 167, 167);
     border-radius:50%;
-}
-
-.popup .body {
+  }
+  
+  .popup .body {
     padding:20px;
     text-align:center;
-}
-
-.popup .body h1 {
+  }
+  
+  .popup .body h1 {
     font-size:25px;
     margin-bottom:10px;
     color:#222;
-}
-
-.popup .body p {
+  }
+  
+  .popup .body p {
     font-size:15px;
     color:#555;
     margin-bottom:20px;
-}
-
-.popup .body .close-btn {
+  }
+  
+  .popup .body .close-btn {
     padding:10px 20px;
     border:1px solid #888;
     color:#888;
@@ -262,9 +276,9 @@ body {
     font-size:16px;
     cursor:pointer;
     outline:none;
-}
-
-.golden-cookie {
+  }
+  
+  .golden-cookie {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 105px;
@@ -273,4 +287,4 @@ body {
     top: 23%;
     left: 50%;
     filter: drop-shadow(0 0 5px rgb(44, 44, 44));
-}
+  }
