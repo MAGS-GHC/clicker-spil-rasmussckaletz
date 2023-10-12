@@ -207,6 +207,7 @@ body {
     transition:top 0ms ease-in-out 200ms,
     opacity 200ms ease-in-out 0ms,
     transform 200ms ease-in-out 0ms;
+    filter: drop-shadow(0 0 5px rgb(44, 44, 44));
 }
 
 .popup.active {
@@ -220,7 +221,7 @@ body {
 
 .popup .head {
     padding:30px 20px;
-    background:#57af57;
+    background:rgb(136, 85, 27);
     text-align:center;
 }
 
@@ -231,7 +232,7 @@ body {
     background:#f5f5f5;
     font-size:40px;
     line-height:80px;
-    color:#57af57;
+    color:rgb(122, 76, 22);
     border-radius:50%;
 }
 
@@ -261,4 +262,15 @@ body {
     font-size:16px;
     cursor:pointer;
     outline:none;
+}
+
+.golden-cookie {
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 105px;
+    height: 105px;
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    filter: drop-shadow(0 0 5px rgb(44, 44, 44));
 }
