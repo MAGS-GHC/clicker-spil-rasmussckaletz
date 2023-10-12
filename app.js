@@ -86,24 +86,6 @@ let cookieMultiplier = multiplierCookies.level1; // Definer at cookieMultiplier 
 let autoclickInterval;
 let labelOnAutoclickButton =  "1 x Autoclicker"; // Definer første knaps titel til autoclicker
 
-
-document.querySelector("#cookieknap").addEventListener("click", function() {
-    showPopup();
-});
-
-document.querySelector("#autoclicker").addEventListener("click", function() {
-    showPopup();
-});
-
-function showPopup() {
-    document.querySelector(".popup").classList.add("active");
-
-    document.querySelector(".popup .close-btn").addEventListener("click", function() {
-        document.querySelector(".popup").classList.remove("active");
-    });
-}
-
-
 // Generel opdatering af selve knapperne og værdier samt design
 function UpdateCookieCounter() {
     let cookieKnapHTML = document.getElementById("cookieknap");
