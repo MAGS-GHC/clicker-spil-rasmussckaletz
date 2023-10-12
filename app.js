@@ -112,8 +112,10 @@ function UpdateCookieCounter() {
 
 // Definer hvad der sker, når der klikkes på cookie
 function ClickOnCookie() {
+    let sound = document.getElementById("cookielyd");
     cookies += cookieMultiplier; // tilføj antal cookies til tæller (cookieMultiplier angiver det level og antal cookies, vi har købt)
     cookiesInTotal += cookieMultiplier; // tilføj antal cookies til total tæller (cookieMultiplier angiver det level og antal cookies, vi har købt)
+    sound.play();
     UpdateCookieCounter();
 }
 
